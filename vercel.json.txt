@@ -1,0 +1,32 @@
+{
+  "headers": [
+    {
+      "source": "/:path*.gz",
+      "headers": [
+        { "key": "Content-Encoding", "value": "gzip" },
+        { "key": "Cache-Control", "value": "public, max-age=315360000" }
+      ]
+    },
+    {
+      "source": "/:path*.br",
+      "headers": [
+        { "key": "Content-Encoding", "value": "br" },
+        { "key": "Cache-Control", "value": "public, max-age=315360000" }
+      ]
+    },
+    {
+      "source": "/Build/MobiCar.wasm.gz",
+      "headers": [
+        { "key": "Content-Type", "value": "application/wasm" },
+        { "key": "Content-Encoding", "value": "gzip" }
+      ]
+    },
+    {
+      "source": "/Build/MobiCar.wasm.br",
+      "headers": [
+        { "key": "Content-Type", "value": "application/wasm" },
+        { "key": "Content-Encoding", "value": "br" }
+      ]
+    }
+  ]
+}
